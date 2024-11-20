@@ -1,125 +1,246 @@
-# Project Documentation
+<p align="center"><h1 align="center">CGM-PREAMBLE-REPORT</h1></p>
+<p align="center">
+	<em><code>❯ A project to visualize glucose and meal data, generate reports, and manage user authentication.</code></em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/github/last-commit/Utsav-P-Patel/Cgm-Preamble-Report?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/Utsav-P-Patel/Cgm-Preamble-Report?style=default&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/Utsav-P-Patel/Cgm-Preamble-Report?style=default&color=0080ff" alt="repo-language-count">
+</p>
+<p align="center"><!-- default option, no dependency badges. -->
+</p>
+<p align="center">
+	<!-- default option, no dependency badges. -->
+</p>
+<br>
 
-## Overview
+## 🔗 Table of Contents
 
-This project is designed to visualize glucose and meal data, generate reports, and manage user authentication. It uses Flask for the backend, D3.js for data visualization, and jsPDF for generating PDF reports. The project is deployed using Gunicorn and managed with Supervisord.
+- [📍 Overview](#-overview)
+- [👾 Features](#-features)
+- [📁 Project Structure](#-project-structure)
+  - [📂 Project Index](#-project-index)
+- [🚀 Getting Started](#-getting-started)
+  - [☑️ Prerequisites](#-prerequisites)
+  - [⚙️ Installation](#-installation)
+  - [🤖 Usage](#🤖-usage)
 
-## Project Structure
+---
 
-### Root Directory
+## 📍 Overview
 
-- **gunicorn.conf.py**: Configuration file for Gunicorn, specifying server settings and logging.
-- **nginxConfig**: Configuration for Nginx to forward requests from port 80 to port 8000.
-- **patientApiWithAuth.py**: Main file with all APIs and business logic, including authentication.
-- **requirements.txt**: Lists all the project dependencies.
-- **run.sh**: Script with commands for deploying the project.
-- **supervisord.conf**: Configuration for Supervisord, managing the application processes.
+This project is designed to visualize patient's glucose and meal data, generate reports, and manage user authentication. It uses Flask for the backend, D3.js for data visualization, and jsPDF for generating PDF reports. The project is deployed using Gunicorn and managed with Supervisord.
 
-### Directories
+---
 
-- **auth/**: Contains authentication-related JSON files.
-  - **CGM_O_Auth.json**
-  - **clientsecret.json**
-- **static/**: Contains static assets like CSS, JavaScript, and images.
-  - **assets/**: Subdirectory for assets.
-    - **js/**: JavaScript files for various functionalities.
-      - **chartGenerate.js**: Generates visualization charts.
-      - **contentLoader.js**: Handles data preprocessing, API calls, and UI updates.
-      - **pdfGenerateAsync.js**: Asynchronous script for generating PDFs.
-      - **request.js**: Handles API requests and data cleaning.
-    - **css/**: CSS files for styling.
-      - **style.css**: Main stylesheet.
-      - **d3.css**: Additional styles for D3.js charts.
-- **templates/**: HTML templates for the web application.
-  - **index.html**: Home page template.
-  - **login.html**: Login page template.
-- **tmp/**: Temporary directory for storing files.
-  - **pdf/**: Subdirectory for PDF files.
+## 👾 Features
 
-## Key Files and Their Functions
+- **Data Visualization**: Visualize glucose and meal data using D3.js.
+- **Report Generation**: Generate PDF reports using jsPDF.
+- **User Authentication**: Manage user authentication using Google-based login.
 
-### Python Files
+---
 
-- **patientApiWithAuth.py**: Main application file with routes for user authentication, data retrieval, and PDF management.
+## 📁 Project Structure
 
-### JavaScript Files
+```sh
+└── Cgm-Preamble-Report/
+    ├── README.md
+    ├── gunicorn.conf.py
+    ├── nginxConfig
+    ├── patientApiWithAuth.py
+    ├── requirements.txt
+    ├── run.sh
+    ├── static
+    │   └── assets
+    │       ├── js
+    │       │   ├── chartGenerate.js
+    │       │   ├── contentLoader.js
+    │       │   ├── pdfGenerateAsync.js
+    │       │   └── request.js
+    ├── supervisord.conf
+    └── templates
+        ├── index.html
+        └── login.html
+    └── auth
+        └── clientsecret.json
+    └── tmp
+        └── pdf
+```
 
-- **chartGenerate.js**: Generates charts using D3.js.
-- **contentLoader.js**: Loads and processes content, manages UI interactions.
-- **pdfGenerateAsync.js**: Asynchronous PDF generation script.
-- **request.js**: Handles API requests and data cleaning.
+### Project Index
 
-### Configuration Files
+<details open>
+	<summary><b><code>CGM-PREAMBLE-REPORT/</code></b></summary>
+	<details> <!-- __root__ Submodule -->
+		<summary><b>__root__</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/supervisord.conf'>supervisord.conf</a></b></td>
+				<td><code>Configuration for Supervisord, managing the application processes.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/gunicorn.conf.py'>gunicorn.conf.py</a></b></td>
+				<td><code>Configuration file for Gunicorn, specifying server settings and logging.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/patientApiWithAuth.py'>patientApiWithAuth.py</a></b></td>
+				<td><code>Main file with all APIs and business logic, including authentication.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/requirements.txt'>requirements.txt</a></b></td>
+				<td><code>Lists all the project dependencies.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/nginxConfig'>nginxConfig</a></b></td>
+				<td><code>Configuration for Nginx to forward requests from port 80 to port 8000.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/run.sh'>run.sh</a></b></td>
+				<td><code>Script with commands for deploying the project.</code></td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
+	<details> <!-- templates Submodule -->
+		<summary><b>templates</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/templates/login.html'>login.html</a></b></td>
+				<td><code>Login page template.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/templates/index.html'>index.html</a></b></td>
+				<td><code>Home page template.</code></td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
+	<details> <!-- auth Submodule -->
+		<summary><b>auth</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/auth/clientsecret.json'>clientsecret.json</a></b></td>
+				<td><code>Contains authentication-related client secrets from google GCP OAuth.</code></td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
+	<details> <!-- static Submodule -->
+		<summary><b>static</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/static/assets/js/chartGenerate.js'>chartGenerate.js</a></b></td>
+				<td><code>Generates visualization charts using D3.js.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/static/assets/js/contentLoader.js'>contentLoader.js</a></b></td>
+				<td><code>Handles data preprocessing, API calls, and UI updates.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/static/assets/js/pdfGenerateAsync.js'>pdfGenerateAsync.js</a></b></td>
+				<td><code>Asynchronous script for generating PDFs.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/blob/master/static/assets/js/request.js'>request.js</a></b></td>
+				<td><code>Handles API requests and data cleaning.</code></td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
+	<details> <!-- tmp Submodule -->
+		<summary><b>tmp</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/Utsav-P-Patel/Cgm-Preamble-Report/tree/master/tmp/pdf'>pdf</a></b></td>
+				<td><code>Subdirectory for storing generated PDF files.</code></td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
+</details>
 
-- **gunicorn.conf.py**: Configures Gunicorn server settings.
-- **nginxConfig**: Nginx configuration for reverse proxy.
-- **supervisord.conf**: Configures Supervisord for process management.
-- **requirements.txt**: Lists Python dependencies.
+---
 
-### Deployment Script
+## 🚀 Getting Started
 
-- **run.sh**: Script for setting up and deploying the project.
+### ☑️ Prerequisites
 
-## Functionality
+Before getting started with Cgm-Preamble-Report, ensure your runtime environment meets the following requirements:
 
-### Backend (Flask)
+- **Programming Language:** Python
+- **Package Manager:** Pip
+- **Web Server:** Nginx
+- **Process Manager:** Supervisord
 
-- **patientApiWithAuth.py**: Handles user authentication using Google-based login, retrieves data from Tryvital, saves patient reports, and manages other business logic.
+### ⚙️ Installation
 
-### Frontend (HTML and JavaScript)
+Install Cgm-Preamble-Report using the following steps:
 
-- **index.html**: Home page where users can interact with the application.
-- **login.html**: Google-based login page.
-- **chartGenerate.js**: Generates visualization charts using D3.js.
-- **contentLoader.js**: Manages data preprocessing, API calls, and UI updates based on different conditions.
-- **pdfGenerateAsync.js**: Asynchronously generates PDF reports from the loaded content.
-- **request.js**: Fetches data from the API, cleans, and filters it.
+1. **Clone the Repository:**
 
-### Server Configuration
+```sh
+❯ git clone https://github.com/Utsav-P-Patel/Cgm-Preamble-Report
+```
 
-- **Nginx**: Acts as a reverse proxy to forward requests from port 80 to port 8000, where Gunicorn is running.
-- **Gunicorn**: Serves the Flask application as a WSGI HTTP server.
-- **Supervisord**: Manages and ensures that the Gunicorn process runs continuously and restarts if it fails.
+2. **Navigate to the Project Directory:**
 
-## Deployment Instructions
+```sh
+❯ cd Cgm-Preamble-Report
+```
 
-1. **Start Nginx**: Configure and restart Nginx using the settings in `nginxConfig`.
+3. **Create and Activate a Virtual Environment:**
+
+```sh
+❯ python3 -m venv env
+❯ source env/bin/activate
+```
+
+4. **Install the Project Dependencies:**
+
+```sh
+❯ pip install -r requirements.txt
+```
+
+5. **Configure Nginx:**
+
+   - Place the `nginxConfig` file in the appropriate Nginx configuration directory (e.g., `/etc/nginx/sites-available/`).
+   - Create a symlink to the `sites-enabled` directory:
+
+   ```sh
+   sudo ln -s /etc/nginx/sites-available/nginxConfig /etc/nginx/sites-enabled/
+   ```
+
+   - Restart Nginx:
+
    ```sh
    sudo systemctl restart nginx
    ```
+6. **Start the Application using Supervisord and Check Application Status:**
 
-2. **Activate Virtual Environment**: Activate the Python virtual environment.
+   - Start the application using Supervisord:
+
    ```sh
-   source env/bin/activate
+   sudo supervisord -c supervisord.conf
    ```
 
-3. **Install Dependencies**: Install the required Python packages.
+   - Check the application status:
+
    ```sh
-   pip install -r requirements.txt
+   sudo supervisorctl -c supervisord.conf status
    ```
 
-4. **Run Supervisord**: Start the application using Supervisord.
-   ```sh
-   supervisord -c supervisord.conf
-   ```
+### 🤖 Usage
 
-5. **Check Application Status**: Verify the application status.
-   ```sh
-   supervisorctl -c supervisord.conf status
-   ```
+Run Cgm-Preamble-Report using the following command:
 
-## Configuration Files
+```sh
+❯ supervisord -c supervisord.conf
+```
 
-### gunicorn.conf.py
-
-Configures the Gunicorn server settings, including error logging and logging location.
-
-### nginxConfig
-
-Configures Nginx to forward requests from port 80 to port 8000 (Gunicorn server port).
-
-### supervisord.conf
-
-Configures Supervisord for process management, including logging info, location, server URL, autostart, and autorestart settings.
-
-By following these steps and using the provided configuration files, you can successfully deploy and manage the project.
+---
