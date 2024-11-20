@@ -1,0 +1,65 @@
+
+/*FIXME: Add this attr where required.*/
+/*  .attr("class", "upper-limit-text")*/
+
+.font1 {
+    font-family: FK Screamer Legacy;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+}
+.font2 {
+
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Rules;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: -0.48px;
+}
+.font3 {
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Rules;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+
+@font-face {
+    font-family: Rules;
+    src: url("../fonts/Rules_Regular/full/Rules-Regular.otf");
+}
+
+@font-face {
+    font-family: FK Screamer Legacy;
+    src: url("../fonts/FK_Screamer_Legacy/otf/FKScreamerLegacy-Upright.otf");
+}
+
+
+
+.sample-font {
+    font-family: Arial, Helvetica, sans-serif; /* Specifies the font family */
+    font-size: 16px; /* Specifies the font size */
+    font-weight: normal; /* Specifies the weight of the font */
+    font-style: normal; /* Specifies the style of the font (e.g., normal, italic) */
+    font-variant: normal; /* Specifies whether the text is in small-caps */
+    font-stretch: normal; /* Specifies the stretching of the font */
+    font-feature-settings: 'liga' on; /* Controls the use of ligatures */
+    font-kerning: auto; /* Controls the use of kerning */
+    font-variant-caps: normal; /* Controls the use of variant capitals */
+    font-variant-ligatures: normal; /* Controls the use of ligatures */
+    font-variant-numeric: normal; /* Controls the use of numeric glyphs */
+    line-height: 1.5; /* Specifies the line height */
+    letter-spacing: normal; /* Specifies the space between characters */
+    text-transform: none; /* Specifies the case transformation (e.g., uppercase) */
+    text-decoration: none; /* Specifies the decoration of the text (e.g., underline) */
+    text-align: left; /* Specifies the horizontal alignment of the text */
+    text-indent: 0; /* Specifies the indentation of the first line */
+    text-shadow: none; /* Specifies the shadow effect of the text */
+    color: #000; /* Specifies the color of the text */
+}

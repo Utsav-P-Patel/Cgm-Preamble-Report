@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Preamble</title>
+    <link href="{{ url_for('static', filename='assets/css/login.css') }}" rel="stylesheet">
+
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box font">
+            <h1>PREAMBLE</h1>
+            <h2>Login</h2>
+            <div class="google-btn">
+                <a href="/google_login">
+                    <div class="google-icon-wrapper">
+                        <img class="google-icon" src="{{ url_for('static', filename='assets/images/google.png') }}" alt="Google Icon">
+                    </div>
+                    <p class="btn-text"><b>Sign in with Google</b></p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
